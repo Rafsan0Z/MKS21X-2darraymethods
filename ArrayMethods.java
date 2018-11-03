@@ -28,8 +28,14 @@ public class ArrayMethods{
 	}
 
 	public static int[] allColSums(int[][] ary) {
-		int[] result = new int[ary.length];
+		int maxcol = 0;
 		for(int i = 0; i < ary.length; i++) {
+			if(ary[i].length > maxcol) {
+				maxcol = ary[i].length;
+			}
+		}
+		int[] result = new int[maxcol];
+		for(int i = maxcol - 1; i >= 0; i--) {
 			result[i] = columnSum(ary,i);
 		}
 		return result;
