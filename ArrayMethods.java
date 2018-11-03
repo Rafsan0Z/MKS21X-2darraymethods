@@ -10,11 +10,10 @@ public class ArrayMethods{
 	}
 
 	public static int columnSum(int[][] ary, int x) {
-		int index = x;
 		int sum = 0;
 		for(int i = 0; i < ary.length; i++) {
-			if(ary.length >= index) {
-				sum += ary[i][index];
+			if(ary[i].length >= x) {
+				sum += ary[i][x];
 			}
 		}
 		return sum;
@@ -23,7 +22,15 @@ public class ArrayMethods{
 	public static int[] allRowSums(int[][] ary) {
 		int[] result = new int[ary.length];
 		for(int i = 0; i < ary.length; i++) {
-			result[i] += rowSum(ary,i);
+			result[i] = rowSum(ary,i);
+		}
+		return result;
+	}
+
+	public static int[] allColSums(int[][] ary) {
+		int[] result = new int[ary.length];
+		for(int i = 0; i < ary.length; i++) {
+			result[i] = columnSum(ary,i);
 		}
 		return result;
 	}
