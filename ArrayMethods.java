@@ -19,4 +19,12 @@ public class ArrayMethods{
 		}
 		return sum;
 	}
+
+	public static int[] allRowSums(int[][] ary) {
+		int[] result = new int[ary.length];
+		for(int i = 0; i < ary.length; i++) {
+			result[i] += rowSum(ary,i);
+		}
+		return result;
+	}
 }
