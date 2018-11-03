@@ -9,6 +9,14 @@ public class ArrayMethods{
 		return sum;
 	}
 
-	public static int columnSum(int[][] ary, int x) {}
-
+	public static int columnSum(int[][] ary, int x) {
+		int index = x -1;
+		int sum = 0;
+		for(int i = 0; i < ary.length; i++) {
+			if(ary.length <= index) {
+				sum += ary[i][x];
+			}
+		}
+		return sum;
+	}
 }
