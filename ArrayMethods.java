@@ -48,7 +48,7 @@ public class ArrayMethods{
 		return true;
 	}
 
-	public static boolean isColMagic(int[][] ary) {
+	public static boolean isColumnMagic(int[][] ary) {
 		int[] database = allColSums(ary);
 		for(int i = 0; i < database.length - 1; i++) {
 			if(database[i] != database[i+1]) {return false;}
